@@ -1,8 +1,8 @@
-import {Link, Routes, Route} from 'react-router-dom';
+import {Link, Routes, Route, NavLink} from 'react-router-dom';
 import Home from './pages/Home'
-
-import NotFound from './pages/NotFound';
-import BookRoutes from './BookRoutes';
+import NotFound from './pages/NotFound'
+import BookRoutes from './BookRoutes'
+import './styles.css'
 
 function App() {
   return (
@@ -12,8 +12,10 @@ function App() {
       </Routes>
       <nav>
         <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/books'>Books</Link></li>
+          <li>
+            <NavLink to='/'>Home</NavLink>
+          </li>
+          <li><NavLink end to='/books'>Books</NavLink></li>
         </ul>
       </nav>
       <Routes>
